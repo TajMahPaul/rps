@@ -60,7 +60,7 @@ button.turn:hover {
   margin: 0;
   padding: 0;
   border-bottom: 1px solid lightgrey;
-  overflow-y: hiddenrps-game;
+  overflow-y: hidden;
   bottom:0;
 }
 
