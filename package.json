@@ -1,0 +1,27 @@
+  {
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server/server.js",
+    "engines": {
+      "node": "8.9.4"
+    },
+    "scripts": {
+      
+      "start": "server/server.js",
+      "dev": "nodemon server/server.js" ,
+      "test": "echo \"Error: no test specified\" && exit 1"
+      
+      
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "express": "^4.16.2",
+      "socket.io": "^2.0.4"
+    },
+    "devDependencies": {
+      "nodemon": "^1.14.12"
+    }
+  }
