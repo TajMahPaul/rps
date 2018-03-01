@@ -2,6 +2,7 @@ const http = require('http');
 const express = require('express'); 
 const socketio = require('socket.io');
 
+const RpsGame = require('./rps-game');
 
 const app = express();
 
@@ -18,12 +19,14 @@ let waitingPlayer = null;
 io.on('connection', (sock)  => {
     if(waitingPlayer){
         // start game
-        [sock,waitingPlayer].forEach(s => s.emit('message', 'Game Start!'));
+        sock.emit('message','You are player 2');
+        new RpsGame(waitingPlayer,sock);
         waitingPlayer = null;
 
     }else{
         waitingPlayer = sock;
         waitingPlayer.emit('message','Waiting for opponent');
+        waitingPlayer.emit('message','You are player 1');
     }
 
     sock.on('message', (text)  =>{

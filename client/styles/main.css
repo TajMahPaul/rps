@@ -1,0 +1,99 @@
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #464545;
+}
+
+input {
+  outline: none;
+  font-size: 1.0rem;
+  padding: 0 5px;
+}
+
+button {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 3px 15px;
+  color: #00FF00;
+  line-height: 25px;
+  background-color: #464545;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 6px, rgba(0, 0, 0, 0.12) 0 1px 4px;
+  transition: all 150ms ease-in;
+  outline: none;
+}
+
+button:hover {
+    background-color: #00FF00;
+}
+
+button.turn {
+  color: #00FF00;
+  background-color: #464545;
+  box-shadow:none;
+}
+
+button.turn:hover {
+  background-color: #eaeaea;
+}
+
+.rps-wrapper {
+  color: white;    
+  background-color: #000000;
+  width: 400px;
+  height: 500px;
+  max-height: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgrey;
+  overflow: auto;
+  position: relative;
+}
+
+#events {
+  flex-grow: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid lightgrey;
+  overflow-y: hidden;
+  bottom:0;
+}
+
+#events li {
+  padding: 3px 3px 0px 5px;
+  font-family: "Courier New";
+  color: #00FF00;
+}
+
+.chat-wrapper {
+  padding: 20px;
+}
+
+.chat-wrapper form {
+  color: #00FF00;
+  display: flex;
+}
+
+.chat-wrapper form input {
+  color: black;
+  background-color: #464545;
+  font-size: 1.0rem;
+  margin: 0 10px 0 0;
+  padding: 0 5px;
+  flex-grow: 1;
+}
+
+.chat-wrapper form button {
+  width: 80px;
+}
+
+.button-wrapper {
+  display: flex;
+  padding: 10px 50px;
+  justify-content: space-evenly;
+}
