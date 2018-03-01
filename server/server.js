@@ -16,6 +16,9 @@ const server = http.createServer(app);
 const io = socketio(server);
 let waitingPlayer = null;
 
+
+const PORT = process.env.PORT || 8080;
+
 io.on('connection', (sock)  => {
     if(waitingPlayer){
         // start game
@@ -39,7 +42,7 @@ server.on('error', (err) =>{
     console.error('Server error:',err);
 });
 
-server.listen(8080, () => {
+server.listen(PORT, () => {
     console.log('RPS started on 8080');
 
 });
