@@ -49,7 +49,8 @@ class RpsGame {
 
         const p0_t = this._turns[0];
         const p1_t = this._turns[1];
-
+        
+        this._sendToPlayers('----------------------------------------');
         this._sendToPlayer(0, `Your opponent chose ${p1_t}`);
         this._sendToPlayer(1, `Your opponent chose ${p0_t}`);
         
